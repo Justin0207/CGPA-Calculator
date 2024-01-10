@@ -1,2 +1,1 @@
-# CGPA-Calculator
-A CGPA calculator class that can calculate both the GPA and CGPA of a student for different levels.
+The CGPA calculator is a python program designed to help students calculate their Cumulative Grade Point Average based on their grades, level in school and course credit load. It follows the grading system of the University of Benin, Nigeria and it was written in python using OOP concepts
