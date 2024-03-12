@@ -142,7 +142,7 @@ if ans == 'Yes':
         
     ########################################################################################
     
-    elif case == '500 Level':
+    elif level == '500 Level':
         cols = st.columns(4)
         gpa_100 = cols[0].number_input(
             label = '100 Level GPA',
