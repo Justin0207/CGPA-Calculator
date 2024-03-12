@@ -72,112 +72,113 @@ ans = st.selectbox('Do you wish to calculate your CGPA? : ', options = ['No', 'Y
 if ans == 'Yes':
 
     level = st.selectbox('Level  : ', options = ['100 Level', '200 Level', '300 Level', '400 Level', '500 Level'])
-    match level:
-        case '200 Level':
-            cols = st.columns(2)
-            gpa_100 = cols[0].number_input(
-                label ='100 Level GPA',
-                help = 'Enter Your CGPA up to the previous semester',
-                min_value = 0.00,
-                value = 0.00,
-                step = 0.01,
-                key = '2gpa_100'
-            )
-        
-    ############################################################################################################
-        case '300 Level':
-            cols = st.columns(2)
-            gpa_100 = cols[0].number_input(
-                label = '100 Level GPA',
-                help = 'Enter Your CGPA up to the previous semester',
-                min_value = 0.00,
-                value = 0.00,
-                step = 0.01,
-                key = '3gpa_100'
-            )
-        
-    
-            gpa_200 = cols[1].number_input(
-            label = '200 Level GPA',
+    if level == '200 Level':
+        cols = st.columns(2)
+        gpa_100 = cols[0].number_input(
+            label ='100 Level GPA',
             help = 'Enter Your CGPA up to the previous semester',
             min_value = 0.00,
             value = 0.00,
             step = 0.01,
-            key = '3_gpa_200'
-            )
+            key = '2gpa_100'
+        )
+        
+    ############################################################################################################
+    elif  level == '300 Level':
+        cols = st.columns(2)
+        gpa_100 = cols[0].number_input(
+            label = '100 Level GPA',
+            help = 'Enter Your CGPA up to the previous semester',
+            min_value = 0.00,
+            value = 0.00,
+            step = 0.01,
+            key = '3gpa_100'
+        )
+    
+
+        gpa_200 = cols[1].number_input(
+        label = '200 Level GPA',
+        help = 'Enter Your CGPA up to the previous semester',
+        min_value = 0.00,
+        value = 0.00,
+        step = 0.01,
+        key = '3_gpa_200'
+        )
     
     ##########################################################################################
        
     
-        case '400 Level':
-            cols = st.columns(3)
-            gpa_100 = cols[0].number_input(
-                label = '100 Level GPA',
-                help = 'Enter Your CGPA up to the previous semester',
-                min_value = 0.00,
-                value = 0.00,
-                step = 0.01,
-                key = '4gpa_100'
-            )
-        
-    
-            gpa_200 = cols[1].number_input(
-            label = '200 Level GPA',
+    elif  level == '400 Level':
+        cols = st.columns(3)
+        gpa_100 = cols[0].number_input(
+            label = '100 Level GPA',
             help = 'Enter Your CGPA up to the previous semester',
             min_value = 0.00,
             value = 0.00,
             step = 0.01,
-            key = '4_gpa_200'
-            )
-            gpa_300 = cols[2].number_input(
-                label = '300 Level CGPA',
-                help = 'Enter Your CGPA up to the previous semester',
-                min_value = 0.00,
-                value = 0.00,
-                step = 0.01,
-                key = '4_gpa_300'
-            )
+            key = '4gpa_100'
+        )
+    
+
+        gpa_200 = cols[1].number_input(
+        label = '200 Level GPA',
+        help = 'Enter Your CGPA up to the previous semester',
+        min_value = 0.00,
+        value = 0.00,
+        step = 0.01,
+        key = '4_gpa_200'
+        )
+
+        
+        gpa_300 = cols[2].number_input(
+            label = '300 Level CGPA',
+            help = 'Enter Your CGPA up to the previous semester',
+            min_value = 0.00,
+            value = 0.00,
+            step = 0.01,
+            key = '4_gpa_300'
+        )
         
         
     ########################################################################################
     
-        case '500 Level':
-            cols = st.columns(4)
-            gpa_100 = cols[0].number_input(
-                label = '100 Level GPA',
-                help = 'Enter Your CGPA up to the previous semester',
-                min_value = 0.00,
-                value = 0.00,
-                step = 0.01,
-                key = '5gpa_100'
-            )
-            
-        
-            gpa_200 = cols[1].number_input(
-            label = '200 Level GPA',
+    elif case == '500 Level':
+        cols = st.columns(4)
+        gpa_100 = cols[0].number_input(
+            label = '100 Level GPA',
             help = 'Enter Your CGPA up to the previous semester',
             min_value = 0.00,
             value = 0.00,
             step = 0.01,
-            key = '5_gpa_200'
-            )
-            gpa_300 = cols[2].number_input(
-                label = '300 Level CGPA',
-                help = 'Enter Your CGPA up to the previous semester',
-                min_value = 0.00,
-                value = 0.00,
-                step = 0.01,
-                key = '5_gpa_300'
-            )
-            
-            gpa_400 = cols[3].number_input(
-                label = '400 Level CGPA',
-                help = 'Enter Your CGPA up to the previous semester',
-                min_value = 0.00,
-                value = 0.00,
-                step = 0.01,
-                key = '5_gpa_400'
-            )
+            key = '5gpa_100'
+        )
+        
+    
+        gpa_200 = cols[1].number_input(
+        label = '200 Level GPA',
+        help = 'Enter Your CGPA up to the previous semester',
+        min_value = 0.00,
+        value = 0.00,
+        step = 0.01,
+        key = '5_gpa_200'
+        )
+        gpa_300 = cols[2].number_input(
+            label = '300 Level CGPA',
+            help = 'Enter Your CGPA up to the previous semester',
+            min_value = 0.00,
+            value = 0.00,
+            step = 0.01,
+            key = '5_gpa_300'
+        )
+        
+        gpa_400 = cols[3].number_input(
+            label = '400 Level CGPA',
+            help = 'Enter Your CGPA up to the previous semester',
+            min_value = 0.00,
+            value = 0.00,
+            step = 0.01,
+            key = '5_gpa_400'
+        )
     
 grade = np.array([0] * number_of_subjects)
 credit = np.array([0] * number_of_subjects)
@@ -206,39 +207,38 @@ present_gpa = calculate_gpa(grade, credit)
 if st.button('Calculate'):
     st.info('Your semester GPA : {}' .format(present_gpa))
     if ans == 'Yes':
-        match level:
-            case '100 Level':
-                cgpa = present_gpa
-                st.success('Your current CGPA : {}' .format(cgpa))
-                gpa_division(cgpa)
-            
-            case '200 Level':
-                ur_cgpa = (0.1 * gpa_100) + (0.15 * present_gpa)
-                expected_cgpa = 0.5 + 0.75
-                cgpa = round(((ur_cgpa / expected_cgpa) * 5), 2)
-                st.success('Your current CGPA : {}' .format(cgpa))
-                gpa_division(cgpa)
-            
-            case '300 Level':
-                ur_cgpa = (0.1 * gpa_100) + (0.15 * gpa_200) + (0.2 * present_gpa)
-                expected_cgpa = 0.5 + 0.75 + 1
-                cgpa = round(((ur_cgpa / expected_cgpa) * 5), 2)
-                st.success('Your current CGPA : {}' .format(cgpa))
-                gpa_division(cgpa)
-            
-            case '400 Level':
-                ur_cgpa = (0.1 * gpa_100) + (0.15 * gpa_200) + (0.2 * gpa_300) +(0.25 * present_gpa)
-                expected_cgpa = 0.5 + 0.75 + 1 + 1.25
-                cgpa = round(((ur_cgpa / expected_cgpa) * 5), 2)
-                st.success('Your current CGPA : {}' .format(cgpa))
-                gpa_division(cgpa)
+        if level == '100 Level':
+            cgpa = present_gpa
+            st.success('Your current CGPA : {}' .format(cgpa))
+            gpa_division(cgpa)
         
-            case '500 Level':
-                ur_cgpa = (0.1 * gpa_100) + (0.15 * gpa_200) + (0.2 * gpa_300) +(0.25 * gpa_400) + (0.3 * present_gpa)
-                expected_cgpa = 0.5 + 0.75 + 1 + 1.25 + 1.5
-                cgpa = round(((ur_cgpa / expected_cgpa) * 5), 2)
-                st.success('Your current CGPA : {}' .format(cgpa))
-                gpa_division(cgpa)
+        elif level == '200 Level':
+            ur_cgpa = (0.1 * gpa_100) + (0.15 * present_gpa)
+            expected_cgpa = 0.5 + 0.75
+            cgpa = round(((ur_cgpa / expected_cgpa) * 5), 2)
+            st.success('Your current CGPA : {}' .format(cgpa))
+            gpa_division(cgpa)
+        
+        elif level == '300 Level':
+            ur_cgpa = (0.1 * gpa_100) + (0.15 * gpa_200) + (0.2 * present_gpa)
+            expected_cgpa = 0.5 + 0.75 + 1
+            cgpa = round(((ur_cgpa / expected_cgpa) * 5), 2)
+            st.success('Your current CGPA : {}' .format(cgpa))
+            gpa_division(cgpa)
+        
+        elif level == '400 Level':
+            ur_cgpa = (0.1 * gpa_100) + (0.15 * gpa_200) + (0.2 * gpa_300) +(0.25 * present_gpa)
+            expected_cgpa = 0.5 + 0.75 + 1 + 1.25
+            cgpa = round(((ur_cgpa / expected_cgpa) * 5), 2)
+            st.success('Your current CGPA : {}' .format(cgpa))
+            gpa_division(cgpa)
+        
+        elif level == '500 Level':
+            ur_cgpa = (0.1 * gpa_100) + (0.15 * gpa_200) + (0.2 * gpa_300) +(0.25 * gpa_400) + (0.3 * present_gpa)
+            expected_cgpa = 0.5 + 0.75 + 1 + 1.25 + 1.5
+            cgpa = round(((ur_cgpa / expected_cgpa) * 5), 2)
+            st.success('Your current CGPA : {}' .format(cgpa))
+            gpa_division(cgpa)
                 
                 
                 
